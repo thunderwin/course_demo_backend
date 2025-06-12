@@ -1,13 +1,6 @@
-// 这是我们最简单的后端服务器
-// 想象一下，这就像是开了一家只会说"你好"的小店
 
-// 首先，我们需要引入Node.js自带的http模块
-// 这个模块就像是我们开店需要的基本工具包
 const http = require('http');
-
-// 引入cors模块
 const cors = require('cors');
-
 const content = require('./content.json');
 
 // 创建服务器的函数
@@ -38,7 +31,7 @@ const server = http.createServer((请求, 响应) => {
 
 // 让服务器开始监听8000端口
 // 这就像是我们正式开门营业，在8000号门牌等待客人的到来
-const 端口 = 8000;
+const 端口 = 7000;
 server.listen(端口, () => {
     console.log(`🎉 服务器已经启动啦！`);
     console.log(`📍 访问地址：http://localhost:${端口}`);
