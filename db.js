@@ -1,8 +1,16 @@
-const sqlite3 = require('sqlite3').verbose();
+const { DataTypes } = require('sequelize');
+const sequelize = require('./db');
 
-// 连接数据库（如果不存在会自动创建）
-const db = new sqlite3.Database('myapp.db');
+const User = sequelize.define('User', {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+    },
+});
 
-
-
-console.log('数据库连接成功！');
+module.exports = User;
